@@ -35,22 +35,4 @@ print('Test accuracy:', test_acc)
 predictions = model.predict(test_images)
 print(predictions[0])
 
-model.save('numberAI.h5')
-
-
-
-
-
-
-print(test_labels[0])
-print(np.argmax(predictions[0]))
-
-plt.figure(figsize=(10,10))
-for i in range(0):
-    plt.subplot(5,5,i+1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(train_images[i], cmap=plt.cm.binary)
-    plt.show()
-
+model.save('numberAI.pb')
